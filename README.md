@@ -2,7 +2,7 @@
 
 Steps will be provided on how to deploy all of the software in a Docker environment using Docker Compose. It is assumed that Docker is already installed and configured on the system.
 
-### Clone the repo
+### 1. Clone the repo
 
 Clone this repo to your local machine using `https://github.com/skenderidis/bigip-logs` and switch the working directory to be `bigip-logs`
 
@@ -11,7 +11,7 @@ git clone https://github.com/f5devcentral/nap-policy-management
 cd bigip-logs
 ```
 
-### Install Logstash using docker-compose
+### 2. Install Logstash using docker-compose
 
 ```shell
 TZ=Asia/Dubai && docker-compose up -d
@@ -22,7 +22,7 @@ NOTES:
 >  - The TCP port that Logstash is listening to is 8515. This can be changed from the `docker-compose.yaml` file. 
 
 
-### Configuring index for Elastic (Optional, only if you are using ELK)
+### 3. Configuring index for Elastic (Optional, only if you are using ELK)
 
 Create index templates for on Elasticsearch
 
@@ -32,7 +32,7 @@ curl -d "@index-template.json" -H 'Content-Type: application/json' -X PUT 'http:
 Expected Response: `{"acknowledged":true}`
 
 
-### Configure Logging profile for BIGIP
+### 4. Configure Logging profile for BIGIP
 
 On BIGIP go to Event Logs -> Logging Profiles and create a new profile.
 Select the following variables:
@@ -47,7 +47,7 @@ date_time="%date_time%",is_truncated="%is_truncated%",ip_client="%ip_client%",vs
 - Maximum Entry Length: 10K
 
 
-### Modify logstash.conf
+### 5. Modifing output of logstash.conf 
 Open the logstash.conf and modify the output plugin for the configuration. If you are using elasticseach you just need to change the hostname/IP of Elastiseach, but if you are using another SIEM solution you need to modify the output accordingly. More information on logstash output plugins can be found on (https://www.elastic.co/guide/en/logstash/current/output-plugins.html)
 
 Currently the output configuration is as follows:
