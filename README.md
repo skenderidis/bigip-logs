@@ -7,7 +7,7 @@ Steps will be provided on how to deploy all of the software in a Docker environm
 Clone this repo to your local machine using `https://github.com/skenderidis/bigip-logs` and switch the working directory to be `bigip-logs`
 
 ```shell
-git clone https://github.com/f5devcentral/nap-policy-management
+git clone https://github.com/skenderidis/bigip-logs
 cd bigip-logs
 ```
 
