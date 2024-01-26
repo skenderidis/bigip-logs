@@ -305,7 +305,7 @@ Expected Response: `{"acknowledged":true}`
 
 ## Step 5.  Importing Grafana Dashboards that work with Elasticsearch
 
-pending.
+TBD.
 
 
 
