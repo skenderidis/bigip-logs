@@ -83,21 +83,6 @@ input {
 }
 ```
 
-
-### Input 
-This is were you can define the post and type of the information you expecting Logstash to receive. In our case, it listens on port 8515 and it is expecting syslog messages.  
-
-```js
-input {
-  syslog {
-    port => 8515
-    codec => plain {
-      charset => "ISO-8859-1"
-    }
-  }
-}
-```
-
 ### Grok 
 Grok is a great way to parse unstructured log data into something structured and queryable. Grok works by combining text patterns into something that matches your logs.
 In our configuration we are using Grok to match the fields that have been configured on ASM CSV logging format.
