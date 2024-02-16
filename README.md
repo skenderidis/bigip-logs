@@ -35,7 +35,7 @@ Select the following variables:
 - Protocol: TCP
 - Storage Format:  User-Defined
 ```
-date_time="%date_time%",is_truncated="%is_truncated%",ip_client="%ip_client%",vs_name="%vs_name%",dest_port="%dest_port%",attack_type="%attack_type%",blocking_exception_reason="%blocking_exception_reason%",method="%method%",policy_name="%policy_name%",protocol="%protocol%",request_status="%request_status%",responseCode="%response_code%",severity="%severity%",sig_cves="%sig_cves%",sig_ids="%sig_ids%",sig_names="%sig_names%",sig_set_names="%sig_set_names%",sub_violations="%sub_violations%",support_id="%support_id%",threat_campaign_names="%threat_campaign_names%",unit_hostname="%unit_hostname%",url-decode="%uri%",violation_rating="%violation_rating%",x_forwarded_for_header_value="%x_forwarded_for_header_value%",violations="%violations%",violation_details="%violation_details%",request="%request%"
+date_time="%date_time%",is_truncated="%is_truncated%",ip_client="%ip_client%",vs_name="%vs_name%",dest_ip="%dest_ip%",dest_port="%dest_port%",attack_type="%attack_type%",blocking_exception_reason="%blocking_exception_reason%",method="%method%",policy_name="%policy_name%",protocol="%protocol%",request_status="%request_status%",response_code="%response_code%",severity="%severity%",sig_cves="%sig_cves%",sig_ids="%sig_ids%",sig_names="%sig_names%",sig_set_names="%sig_set_names%",sub_violations="%sub_violations%",support_id="%support_id%",threat_campaign_names="%threat_campaign_names%",unit_hostname="%unit_hostname%",uri="%uri%",violation_rating="%violation_rating%",x_forwarded_for_header_value="%x_forwarded_for_header_value%",violations="%violations%",violation_details="%violation_details%",request="%request%"
 ```
 - Maximum Request Size: 2048	
 - Maximum Entry Length: 10K
