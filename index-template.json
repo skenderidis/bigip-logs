@@ -42,7 +42,11 @@
               },
               "responseCode": {
                   "type": "integer"
+              },
+              "violation_rating": {
+                  "type": "integer"
               }
+            
           }
       },
       "aliases": {
