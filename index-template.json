@@ -37,7 +37,7 @@
               "serverIp": {
                   "type": "ip"
               },
-              "requestStatus": {
+              "dest_port": {
                   "type": "integer"
               },
               "responseCode": {
