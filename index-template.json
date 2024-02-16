@@ -31,8 +31,17 @@
               "geoip.location": {
                   "type": "geo_point"
               },
-              "ip_client": {
+              "clientIp": {
                   "type": "ip"
+              },
+              "serverIp": {
+                  "type": "ip"
+              },
+              "requestStatus": {
+                  "type": "integer"
+              },
+              "responseCode": {
+                  "type": "integer"
               }
           }
       },
