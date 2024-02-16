@@ -35,7 +35,7 @@ Select the following variables:
 - Protocol: TCP
 - Storage Format:  User-Defined
 ```
-date_time="%date_time%",is_truncated="%is_truncated%",ip_client="%ip_client%",vs_name="%vs_name%",dest_port="%dest_port%",attack_type="%attack_type%",blocking_exception_reason="%blocking_exception_reason%",method="%method%",policy_name="%policy_name%",protocol="%protocol%",request_status="%request_status%",response_code="%response_code%",severity="%severity%",sig_cves="%sig_cves%",sig_ids="%sig_ids%",sig_names="%sig_names%",sig_set_names="%sig_set_names%",sub_violations="%sub_violations%",support_id="%support_id%",threat_campaign_names="%threat_campaign_names%",unit_hostname="%unit_hostname%",uri="%uri%",violation_rating="%violation_rating%",x_forwarded_for_header_value="%x_forwarded_for_header_value%",violations="%violations%",violation_details="%violation_details%",request="%request%"
+date_time="%date_time%",is_truncated="%is_truncated%",ip_client="%ip_client%",vs_name="%vs_name%",dest_port="%dest_port%",attack_type="%attack_type%",blocking_exception_reason="%blocking_exception_reason%",method="%method%",policy_name="%policy_name%",protocol="%protocol%",request_status="%request_status%",responseCode="%response_code%",severity="%severity%",sig_cves="%sig_cves%",sig_ids="%sig_ids%",sig_names="%sig_names%",sig_set_names="%sig_set_names%",sub_violations="%sub_violations%",support_id="%support_id%",threat_campaign_names="%threat_campaign_names%",unit_hostname="%unit_hostname%",url-decode="%uri%",violation_rating="%violation_rating%",x_forwarded_for_header_value="%x_forwarded_for_header_value%",violations="%violations%",violation_details="%violation_details%",request="%request%"
 ```
 - Maximum Request Size: 2048	
 - Maximum Entry Length: 10K
@@ -94,13 +94,14 @@ In our configuration we are using Grok to match the fields that have been config
         ",attack_type=\"%{DATA:attack_type}\"",
         ",blocking_exception_reason=\"%{DATA:blocking_exception_reason}\"",
         ",date_time=\"%{DATA:date_time}\"",
+        ",serverIp=\"%{DATA:dest_ip}\"",
         ",dest_port=\"%{DATA:dest_port}\"",
-        ",ip_client=\"%{DATA:ip_client}\"",
+        ",clientIp=\"%{DATA:ip_client}\"",
         ",is_truncated=\"%{DATA:is_truncated}\"",
         ",method=\"%{DATA:method}\"",
         ",policy_name=\"%{DATA:policy_name}\"",
         ",protocol=\"%{DATA:protocol}\"",
-        ",request_status=\"%{DATA:request_status}\"",
+        ",requestStatus=\"%{DATA:request_status}\"",
         ",request=\"%{DATA:request}\"",
         ",request_body_base64=\"%{DATA:request_body_base64}\"",
         ",response_code=\"%{DATA:response_code}\"",
@@ -122,7 +123,7 @@ In our configuration we are using Grok to match the fields that have been config
         ",violations=\"%{DATA:violations}\"",
         ",violation_details=\"%{DATA:violation_details_xml}\"",
         ",violation_rating=\"%{DATA:violation_rating}\"",
-        ",vs_name=\"%{DATA:vs_name}\"",
+        ",virtualServerName=\"%{DATA:vs_name}\"",
         ",x_forwarded_for_header_value=\"%{DATA:x_forwarded_for_header_value}\""
      ]
    }
